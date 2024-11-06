@@ -1,0 +1,97 @@
+:root {
+    --bg-dark: #123;
+    --bg: #345;
+    --bg-light: #567;
+    --bd: #ff0;
+    --bd-dark: #970;
+    --bd-light: #ff7;
+    --color: #ddd;
+    --color-dark: #999;
+    --color-light: #fff;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--color);
+}
+
+.header {
+    display: flex;
+    padding: 10px;
+    background-color: var(--bg-dark);
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    transition: all 300ms ease-in-out;
+}
+
+.logo:hover {
+    background: radial-gradient(var(--bg-light) 0%, #0000 70%);
+}
+
+.main-menu {
+    display: flex;
+
+}
+
+.main-menu li {
+    border: 1px solid var(--bd-dark);
+    border-radius: 7px;
+    padding: 0;
+    margin: 0 7px;
+    color: var(--color);
+    list-style: none;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.main-menu li.selected {
+    border-color: var(--bd);
+    color: var(--color-light);
+}
+
+.main-menu li:hover {
+    background-color: var(--bg-light);
+    color: var(--color-light);
+    border-color: var(--bd-light);
+}
+
+.main-menu li a {
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+    color: inherit;
+}
+
+main{
+    width: 1280px;
+    max-width: 100%;
+    border: 1px solid var(--bd-dark);
+    margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 512px) {
+
+}
