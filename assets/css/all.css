@@ -27,12 +27,20 @@ body {
     background-color: var(--bg-dark);
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
 }
 
 .logo {
-    transition: all 300ms ease-in-out;
+    align-self: stretch;
+    /*height: 100%;*/
+    /*transition: all 300ms ease-in-out;*/
+}
+.logo img{
+    height: 100%;
 }
 
 .logo:hover {
@@ -41,7 +49,6 @@ body {
 
 .main-menu {
     display: flex;
-
 }
 
 .main-menu li {
@@ -76,8 +83,7 @@ body {
 main{
     width: 1280px;
     max-width: 100%;
-    border: 1px solid var(--bd-dark);
-    margin: 0 auto;
+    margin: 150px auto 0 auto;
 }
 
 @media (max-width: 1280px) {
