@@ -127,6 +127,40 @@ main {
     color: var(--bd-dark);
 }
 
+.text-center{
+    text-align: center;
+}
+.text-justify{
+    text-align: justify;
+}
+.d-flex{
+    display: flex;
+}
+
+.anim-block{
+    flex: 1;
+    position: relative;
+}
+
+.social{
+    position: absolute;
+    right: 0;
+    top: 83px;
+    overflow: hidden;
+    width: 150px;
+    background: #fff;
+    text-align: center;
+    border-radius: 3px 0 0 3px;
+    list-style: none;
+    display: flex;
+    padding: 5px 7px;
+}
+.social a{
+    text-decoration: none;
+    padding: 0 7px;
+    color: var(--bd-dark);
+}
+
 @media (max-width: 1280px) {
 
 }
