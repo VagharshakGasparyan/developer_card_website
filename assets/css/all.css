@@ -32,18 +32,25 @@ body {
     left: 0;
     width: 100%;
     height: 150px;
+    background-image: url("../images/bg_meghu_sm.png");
+}
+
+footer{
+    padding: 10px;
+    background-color: var(--bg-dark);
+    background-image: url("../images/bg_meghu_sm.png");
 }
 
 .logo {
     align-self: stretch;
-    /*height: 100%;*/
-    /*transition: all 300ms ease-in-out;*/
+    display: flex;
+    cursor: pointer;
 }
 .logo img{
     height: 100%;
 }
 
-.logo:hover {
+.logo:hover img {
     background: radial-gradient(var(--bg-light) 0%, #0000 70%);
 }
 
