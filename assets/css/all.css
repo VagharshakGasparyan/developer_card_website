@@ -74,6 +74,7 @@ footer {
 .main-menu li.selected {
     border-color: var(--bd);
     color: var(--color-light);
+    background-color: #99770033;
 }
 
 .main-menu li:hover {
