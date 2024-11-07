@@ -130,38 +130,110 @@ main {
     color: var(--bd-dark);
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
-.text-justify{
+
+.text-justify {
     text-align: justify;
 }
-.d-flex{
+
+.d-flex {
     display: flex;
 }
 
-.anim-block{
+.anim-block {
     flex: 1;
     position: relative;
 }
 
-.social{
+.social {
+    transition: all 300ms ease;
     position: absolute;
     right: 0;
-    top: 83px;
+    bottom: -30px;
     overflow: hidden;
-    width: 150px;
+    width: 130px;
     background: #fff;
     text-align: center;
     border-radius: 3px 0 0 3px;
     list-style: none;
     display: flex;
     padding: 5px 7px;
+    opacity: 0.03;
 }
-.social a{
+
+.social a {
     text-decoration: none;
     padding: 0 7px;
     color: var(--bd-dark);
+}
+
+.elev {
+    position: relative;
+    flex: 1;
+    margin-left: 10px;
+    transition: all 300ms ease;
+}
+
+.elev:first-child {
+    margin-left: 0;
+}
+
+.elev:before{
+    transition: all 300ms ease;
+    content:"";
+    background-image: url("../images/bg_meghu_sm.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+}
+
+.elev:hover:before{
+    content:"";
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.elev:hover .social{
+    opacity: 0.9;
+}
+
+#ex_left {
+    position: fixed;
+    left: -15px;
+    top: 150px;
+    background-color: var(--bd-dark);
+    color: var(--bg);
+    z-index: 1000;
+    width: calc(50% + 15px);
+    height: 30px;
+    transform-origin: 15px center;
+    text-align: right;
+    padding: 7px;
+    border-radius: 15px 0 0 15px;
+}
+
+#ex_right {
+    position: fixed;
+    right: -15px;
+    top: 150px;
+    background-color: var(--bd-dark);
+    color: var(--bg);
+    z-index: 1000;
+    width: calc(50% + 15px);
+    height: 30px;
+    transform-origin: calc(100% - 15px) center;
+    padding: 7px;
+    border-radius: 0 15px 15px 0;
+}
+
+.hr{
+    border: 2px solid var(--bd-dark);
 }
 
 @media (max-width: 1280px) {
