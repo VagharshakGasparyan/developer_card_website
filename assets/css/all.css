@@ -236,6 +236,16 @@ main {
 .hr{
     border: 2px solid var(--bd-dark);
 }
+/*-----------strap------------*/
+.fl-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.fl-1_4{
+    /*flex: 0 0 auto;*/
+    /*width: 0.25%;*/
+}
+/*-----------------------*/
 
 @media (max-width: 1280px) {
 
