@@ -94,7 +94,7 @@ main {
     width: 1280px;
     max-width: 100%;
     margin: 150px auto 0 auto;
-    padding: 15px;
+    padding: 15px 15px 35px 15px;
 }
 
 .btn {
@@ -235,6 +235,47 @@ main {
 
 .hr{
     border: 2px solid var(--bd-dark);
+}
+.feature{
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+    background-color: var(--bg-light);
+    border-radius: 7px;
+    padding: 10px 15px 10px 25px;
+    width: calc(100% - 30px);
+    max-width: 768px;
+    transition: all 500ms ease;
+}
+.feature:hover{
+    margin-left: 30px;
+}
+.feature:hover .count{
+    transform: rotate(360deg);
+    color: var(--bd-dark);
+    background-color: var(--color-light);
+    left: -30px;
+}
+.count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    background-color: var(--bd-dark);
+    border-radius: 7px;
+    user-select: none;
+    transition: all 500ms ease;
+    color: var(--color-light);
+    font-size: 27px;
+}
+.count:hover{
+    transform: rotate(360deg);
+    color: var(--bd-dark);
+    background-color: var(--color-light);
 }
 /*-----------strap------------*/
 .fl-row{
