@@ -6,73 +6,81 @@
     <title>Home</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/all.css" rel="stylesheet" type="text/css">
     <script src="assets/js/all.js"></script>
 </head>
 <body>
-<div id="ex_left" style="position: fixed; left:-15px;top:150px;background-color: var(--bd-dark);color: var(--bg);z-index: 1000;width: calc(50% + 15px);height: 30px;transform-origin: 15px center;text-align: right;padding: 7px;border-radius: 15px 0 0 15px">LEFT IPSUM</div>
-<div id="ex_right" style="position: fixed; right:-15px;top:150px;background-color: var(--bd-dark);color: var(--bg);z-index: 1000;width: calc(50% + 15px);height: 30px;transform-origin: calc(100% - 15px) center;padding: 7px;border-radius: 0 15px 15px 0">RIGHT IPSUM</div>
+<div id="ex_left">
+    LEFT IPSUM
+    <li class="fa fa-star"></li>
+    <li class="fa fa-star"></li>
+    <li class="fa fa-star"></li>
+</div>
+<div id="ex_right">
+    <li class="fa fa-star"></li>
+    <li class="fa fa-star"></li>
+    <li class="fa fa-star"></li>
+    RIGHT IPSUM
+</div>
 <header class="header">
-    <div class="logo">
-        <a href="home.html">
+    <div class="logo" style="overflow: hidden">
+        <a style="height: 100%;" href="home.html">
             <img src="assets/images/logos/logo.svg">
         </a>
         <div style="color: var(--bd); font-size: 24px;margin-left: 10px">Bee ipsum</div>
     </div>
 
-    <ul class="main-menu">
+    <h1 class="text-center">HEADER TEXT</h1>
+
+    <ul class="main-menu d-none d-lg-flex">
         <li><a href="home.html"><i class="fa fa-home"></i> HOME</a></li>
         <li class="selected"><a href="about_us.html">ABOUT US</a></li>
         <li><a href="contact_us.html">CONTACT US</a></li>
     </ul>
+    <label class="d-flex d-lg-none position-relative">
+        <li class="fa fa-3x fa-bars"></li>
+        <input class="menu-checkbox" type="checkbox" style="opacity: 0;height: 0">
+        <div class="main-menu-mobile">
+            <div class="d-flex align-items-center justify-content-center" style="margin-bottom: 50px; cursor: pointer"><i class="fa fa-2x fa-close"></i></div>
+            <li><a href="home.html"><i class="fa fa-home"></i> HOME</a></li>
+            <li class="selected"><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
+        </div>
+    </label>
 
 </header>
 <main>
-    <section style="display: flex;margin-top:35px">
-        <div style="flex: 1">
-            <h1>Menq karucum enq apagan ipsum</h1>
-            <p>Lorem ipsum is simply dummy</p>
-            <p>Mek urish Lorem ipsum is simply dummy</p>
-            <a href="#" class="btn">Button ipsum</a>
-        </div>
-        <div style="flex: 1">
-            <div class="c"><strong>Backend</strong>&nbsp;<i class="fa fa-linux"></i></div>
-            <div class="c"><strong>Frontend</strong>&nbsp;<i class="fa fa-apple"></i>&nbsp;<i class="fa fa-windows"></i>&nbsp;<i class="fa fa-linux"></i></div>
-            <div class="c"><strong>Mobile</strong>&nbsp;<i class="fa fa-apple"></i>&nbsp;<i class="fa fa-android"></i></div>
-        </div>
-    </section>
     <section style="padding: 20px 0">
-        <h2 class="text-center">Concepting & Strategy ipsum</h2>
         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <div class="d-flex">
-            <div style="flex: 1">
-                <i class="fa fa-rocket"></i>
-                <h3>Branding</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <div class="zoom-img-container">
+            <div class="zoom-img-padding">
+                <div style="overflow: hidden;border-radius: 7px;display: flex;align-items: center;justify-content: center;">
+                    <img class="zoom-img" src="assets/images/placeholder.png" alt="placeholder" style="width: 100%">
+                </div>
             </div>
-            <div style="flex: 1">
-                <i class="fa fa-cube"></i>
-                <h3>User Experience</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </div>
-            <div style="flex: 1">
-                <i class="fa fa-object-group"></i>
-                <h3>User Interface</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </div>
-            <div style="flex: 1">
-                <i class="fa fa-code"></i>
-                <h3>Development</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <div style="flex:1;padding: 0;display: flex;flex-direction: column">
+                <div class="zoom-img-padding" style="height: 100%">
+                    <div style="overflow: hidden;border-radius: 7px;display: flex;align-items: center;justify-content: center;height: 100%">
+                        <img class="zoom-img" src="assets/images/placeholder.png" alt="placeholder" style="width: 100%">
+                    </div>
+                </div>
+                <div class="zoom-img-padding" style="height: 100%">
+                    <div style="overflow: hidden;border-radius: 7px;display: flex;align-items: center;justify-content: center;height: 100%">
+                        <img class="zoom-img" src="assets/images/placeholder.png" alt="placeholder" style="width: 100%">
+                    </div>
+                </div>
             </div>
         </div>
-
+        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </section>
+    <hr class="hr">
     <section style="padding: 20px 0">
         <h1 class="text-center">Our Team ipsum</h1>
-        <div class="d-flex">
-            <div class="anim-block">
+        <div class="row">
+            <div class="elev col-lg-4 col-md-6">
                 <h3 class="text-center">Fletch Skinner</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <ul class="social">
@@ -82,7 +90,7 @@
                     <li><a href="#"><i class="fa fa-github"></i></a></li>
                 </ul>
             </div>
-            <div class="anim-block">
+            <div class="elev col-lg-4 col-md-6">
                 <h3 class="text-center">Lance Bogrol</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <ul class="social">
@@ -92,7 +100,7 @@
                     <li><a href="#"><i class="fa fa-github"></i></a></li>
                 </ul>
             </div>
-            <div class="anim-block">
+            <div class="elev col-lg-4 col-md-6">
                 <h3 class="text-center">Valentino Morose</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <ul class="social">
@@ -104,74 +112,44 @@
             </div>
         </div>
     </section>
-    <section>
-        <div>&nbsp;</div>
-        <div>sthdyjfjf---1</div>
-        <div>sthdyjfjf---2</div>
-        <div>sthdyjfjf---3</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-        <div>sthdyjfjf</div>
-    </section>
+
 </main>
 
 <footer>
-    <h1 style="text-align: center">FOOTER TEXT</h1>
+    <h1 class="text-center">FOOTER TEXT</h1>
+    <div class="main">
+        <div class="row">
+            <div class="col-lg-3 col-md-4">
+                <div>1. ABCD EFGH IJKL MNOP QRST</div>
+                <div>2. EFGH</div>
+                <div>3. IJKL</div>
+                <div>4. MNOP</div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div>5. ABCD</div>
+                <div>6. EFGH</div>
+                <div>7. IJKL</div>
+                <div>8. MNOP</div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div>9. ABCD</div>
+                <div>10. EFGH</div>
+                <div>11. IJKL</div>
+                <div>12. MNOP</div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div>13. ABCD</div>
+                <div>14. EFGH</div>
+                <div>15. IJKL</div>
+                <div>16. MNOP</div>
+            </div>
+
+        </div>
+    </div>
+
+    <h4 class="text-center">All right reserved</h4>
 </footer>
+
+<script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>

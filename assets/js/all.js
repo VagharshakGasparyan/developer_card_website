@@ -10,14 +10,14 @@ window.addEventListener("load", ()=>{
         if (height === 50 && needChange){
             needChange = false;
             header.style.height = height + "px";
-            ex_left.style.transform = "rotate(-" + ws_min + "deg)";
-            ex_right.style.transform = "rotate(" + ws_min + "deg)";
+            ex_left ? ex_left.style.transform = "rotate(-" + ws_min + "deg)" : null;
+            ex_right ? ex_right.style.transform = "rotate(" + ws_min + "deg)" : null;
         }
         if (height > 50){
             needChange = true;
             header.style.height = height + "px";
-            ex_left.style.transform = "rotate(-" + ws_min + "deg)";
-            ex_right.style.transform = "rotate(" + ws_min + "deg)";
+            ex_left ? ex_left.style.transform = "rotate(-" + ws_min + "deg)" : null;
+            ex_right ? ex_right.style.transform = "rotate(" + ws_min + "deg)" : null;
         }
     });
 });
