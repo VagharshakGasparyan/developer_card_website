@@ -48,8 +48,9 @@ footer {
     flex-direction: row;
     cursor: pointer;
 }
+
 @media screen and (max-width: 991px) {
-    .logo{
+    .logo {
         flex-direction: column;
     }
 }
@@ -97,7 +98,46 @@ footer {
     color: inherit;
 }
 
-.main{
+.main-menu-mobile {
+    position: absolute;
+    right: 5px;
+    top: 100%;
+    white-space: nowrap;
+    z-index: 1500;
+    background-color: var(--bg-light);
+    padding: 10px;
+    display: none;
+    border: 1px solid var(--color);
+    border-radius: 7px 0 7px 7px;
+    min-width: calc(60vw - 20px);
+    max-width: calc(100vw - 20px);
+}
+
+.main-menu-mobile li {
+    list-style: none;
+}
+
+.main-menu-mobile li:hover {
+    background-color: var(--bd);
+    color: var(--bg-dark);
+}
+
+.main-menu-mobile li.selected {
+    background-color: var(--bd-dark);
+}
+
+.main-menu-mobile li a {
+    display: block;
+    padding: 7px 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-checkbox:checked ~ .main-menu-mobile {
+    display: block;
+}
+
+.main {
     width: 1280px;
     max-width: 100%;
     margin: 0 auto;
@@ -199,18 +239,18 @@ main {
     background-clip: padding-box;
 }
 
-.row{
+.row {
     margin-left: 0;
     margin-right: 0;
 }
 
-.elev:hover{
+.elev:hover {
     border-bottom-color: var(--bd-dark);
 }
 
-.elev:before{
+.elev:before {
     transition: all 300ms ease;
-    content:"";
+    content: "";
     background-image: url("../images/bg_meghu_sm.png");
     position: absolute;
     top: 50%;
@@ -221,14 +261,14 @@ main {
     margin: 5px;
 }
 
-.elev:hover:before{
-    content:"";
+.elev:hover:before {
+    content: "";
     top: 0;
     left: 0;
     opacity: 1;
 }
 
-.elev:hover .social{
+.elev:hover .social {
     opacity: 0.9;
 }
 
@@ -261,10 +301,11 @@ main {
     border-radius: 0 15px 15px 0;
 }
 
-.hr{
+.hr {
     border: 2px solid var(--bd-dark);
 }
-.feature{
+
+.feature {
     margin-top: 20px;
     margin-left: 20px;
     position: relative;
@@ -275,16 +316,19 @@ main {
     max-width: 768px;
     transition: all 500ms ease;
 }
-.feature:hover{
+
+.feature:hover {
     margin-left: 30px;
 }
-.feature:hover .count{
+
+.feature:hover .count {
     transform: rotate(360deg);
     color: var(--bd-dark);
     background-color: var(--color-light);
     left: -30px;
 }
-.count{
+
+.count {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,7 +344,8 @@ main {
     color: var(--color-light);
     font-size: 27px;
 }
-.count:hover{
+
+.count:hover {
     transform: rotate(360deg);
     color: var(--bd-dark);
     background-color: var(--color-light);
