@@ -137,16 +137,10 @@ footer {
     display: block;
 }
 
-.main {
-    width: 1280px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
 main {
     width: 1280px;
     max-width: 100%;
-    margin: 150px auto 0 auto;
+    margin: 165px auto 0 auto;
     padding: 15px 15px 35px 15px;
 }
 
@@ -400,6 +394,14 @@ main {
         grid-template-rows: auto;
     }
 
+}
+.my-breadcrumb{
+    color: var(--bd-dark);
+    text-align: right;
+}
+.my-breadcrumb a{
+    text-decoration: none;
+    color: inherit;
 }
 
 
