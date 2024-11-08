@@ -45,7 +45,13 @@ footer {
 .logo {
     align-self: stretch;
     display: flex;
+    flex-direction: row;
     cursor: pointer;
+}
+@media screen and (max-width: 991px) {
+    .logo{
+        flex-direction: column;
+    }
 }
 
 .logo img {
@@ -193,9 +199,6 @@ main {
     background-clip: padding-box;
 }
 
-/*.elev:first-child {*/
-/*    margin-left: 0;*/
-/*}*/
 .row{
     margin-left: 0;
     margin-right: 0;

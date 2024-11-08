@@ -24,8 +24,8 @@
     RIGHT IPSUM
 </div>
 <header class="header">
-    <div class="logo">
-        <a href="home.html">
+    <div class="logo" style="overflow: hidden">
+        <a style="height: 100%;" href="home.html">
             <img src="assets/images/logos/logo.svg">
         </a>
         <div style="color: var(--bd); font-size: 24px;margin-left: 10px">Bee ipsum</div>
@@ -33,22 +33,23 @@
 
     <h1 class="text-center">HEADER TEXT</h1>
 
-    <ul class="main-menu">
+    <ul class="main-menu d-none d-lg-flex">
         <li class="selected"><a href="home.html"><i class="fa fa-home"></i> HOME</a></li>
         <li><a href="about_us.html">ABOUT US</a></li>
         <li><a href="contact_us.html">CONTACT US</a></li>
     </ul>
+    <div class="d-flex d-lg-none"><li class="fa fa-3x fa-bars"></li></div>
 
 </header>
 <main>
-    <section class="d-flex" style="margin-top:35px">
-        <div style="flex: 1">
-            <h1>Lorem ipsum is simply dummy</h1>
-            <p>Lorem ipsum is simply dummy</p>
-            <p>Mek urish Lorem ipsum is simply dummy</p>
+    <section class="row" style="margin-top:35px">
+        <div class="col-12 col-md-6">
+            <h1>Lorem ipsum is simply dummy1</h1>
+            <p>Lorem ipsum is simply dummy2</p>
+            <p>Lorem ipsum is simply dummy3</p>
             <a href="#" class="btn">Button ipsum</a>
         </div>
-        <div style="flex: 1">
+        <div class="col-12 col-md-6">
             <div class="c"><strong>Backend</strong>&nbsp;<i class="fa fa-linux"></i></div>
             <div class="c"><strong>Frontend</strong>&nbsp;<i class="fa fa-apple"></i>&nbsp;<i class="fa fa-windows"></i>&nbsp;<i class="fa fa-linux"></i></div>
             <div class="c"><strong>Mobile</strong>&nbsp;<i class="fa fa-apple"></i>&nbsp;<i class="fa fa-android"></i></div>
@@ -145,33 +146,36 @@
 
 <footer>
     <h1 class="text-center">FOOTER TEXT</h1>
-    <div class="row main">
-        <div class="col-lg-3 col-md-4">
-            <div>1. ABCD EFGH IJKL MNOP QRST</div>
-            <div>2. EFGH</div>
-            <div>3. IJKL</div>
-            <div>4. MNOP</div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-            <div>5. ABCD</div>
-            <div>6. EFGH</div>
-            <div>7. IJKL</div>
-            <div>8. MNOP</div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-            <div>9. ABCD</div>
-            <div>10. EFGH</div>
-            <div>11. IJKL</div>
-            <div>12. MNOP</div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-            <div>13. ABCD</div>
-            <div>14. EFGH</div>
-            <div>15. IJKL</div>
-            <div>16. MNOP</div>
-        </div>
+    <div class="main">
+        <div class="row">
+            <div class="col-lg-3 col-md-4">
+                <div>1. ABCD EFGH IJKL MNOP QRST</div>
+                <div>2. EFGH</div>
+                <div>3. IJKL</div>
+                <div>4. MNOP</div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div>5. ABCD</div>
+                <div>6. EFGH</div>
+                <div>7. IJKL</div>
+                <div>8. MNOP</div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div>9. ABCD</div>
+                <div>10. EFGH</div>
+                <div>11. IJKL</div>
+                <div>12. MNOP</div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div>13. ABCD</div>
+                <div>14. EFGH</div>
+                <div>15. IJKL</div>
+                <div>16. MNOP</div>
+            </div>
 
+        </div>
     </div>
+
     <h4 class="text-center">All right reserved</h4>
 </footer>
 
