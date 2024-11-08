@@ -90,6 +90,12 @@ footer {
     color: inherit;
 }
 
+.main{
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 main {
     width: 1280px;
     max-width: 100%;
@@ -111,7 +117,11 @@ main {
     background-color: var(--bg-dark);
     color: var(--bd);
     border-color: var(--bd);
-    /*transform: scale(150%, 150%);*/
+}
+
+.btn:active {
+    background-color: var(--bd);
+    color: var(--bd-dark);
 }
 
 .c {
@@ -172,13 +182,24 @@ main {
 
 .elev {
     position: relative;
-    flex: 1;
-    margin-left: 10px;
     transition: all 300ms ease;
+    border-radius: 7px 7px 0 0;
+    background-color: var(--bg-dark);
+    padding: 10px;
+    /*margin:5px;*/
+    border-bottom: 3px solid #0000;
 }
 
-.elev:first-child {
+/*.elev:first-child {*/
+/*    margin-left: 0;*/
+/*}*/
+.row{
     margin-left: 0;
+    margin-right: 0;
+}
+
+.elev:hover{
+    border-bottom-color: var(--bd-dark);
 }
 
 .elev:before{
@@ -191,6 +212,7 @@ main {
     right: 0;
     bottom: 0;
     opacity: 0.1;
+    margin: 5px;
 }
 
 .elev:hover:before{
@@ -276,30 +298,4 @@ main {
     transform: rotate(360deg);
     color: var(--bd-dark);
     background-color: var(--color-light);
-}
-/*-----------strap------------*/
-.fl-row{
-    display: flex;
-    flex-wrap: wrap;
-}
-.fl-1_4{
-    /*flex: 0 0 auto;*/
-    /*width: 0.25%;*/
-}
-/*-----------------------*/
-
-@media (max-width: 1280px) {
-
-}
-
-@media (max-width: 1024px) {
-
-}
-
-@media (max-width: 768px) {
-
-}
-
-@media (max-width: 512px) {
-
 }
