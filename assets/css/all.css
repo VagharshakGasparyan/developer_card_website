@@ -142,6 +142,7 @@ main {
     max-width: 100%;
     margin: 165px auto 0 auto;
     padding: 15px 15px 35px 15px;
+    min-height: calc(100vh - 300px);
 }
 
 .btn {
@@ -402,6 +403,20 @@ main {
 .my-breadcrumb a{
     text-decoration: none;
     color: inherit;
+}
+
+.about-us{
+    background-image: url("../images/bg-image1.jpg");
+    /*backdrop-filter: opacity(50%);*/
+    background-repeat: no-repeat;
+    background-color: var(--bg-dark);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center 50px;
+}
+
+.tx-shadow{
+    text-shadow: 0 0 3px var(--bg-dark), 2px 2px 1px var(--bg-dark);
 }
 
 
