@@ -425,5 +425,13 @@ main {
     text-shadow: 0 0 3px var(--bg-dark), 2px 2px 1px var(--bg-dark);
 }
 
+.anim-number{
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--bd-dark);
+    transition: all 300ms ease-in-out;
+}
+
+
 
 

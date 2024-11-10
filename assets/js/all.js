@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+    let ws = window.scrollY;
     let header = document.querySelector("header");
     let ex_left = document.getElementById("ex_left");
     let ex_right = document.getElementById("ex_right");
@@ -7,8 +8,53 @@ window.addEventListener("load", () => {
     let cogwheel_round = document.getElementById("cogwheel_round");
     let cogwheel_line = document.getElementById("cogwheel_line");
     let needChange = true;
+    //-------------------------------------------------------------------------------
+    let anim_numbers = document.querySelectorAll(".anim-number");
+    let anim_arr = [];
+    anim_numbers.forEach((anim_number, index) => {
+        let start = parseInt(anim_number.getAttribute("data-start") ?? "0");
+        let end = parseInt(anim_number.getAttribute("data-end") ?? "99");
+        let interval = parseInt(anim_number.getAttribute("data-interval") ?? "50");
+        anim_arr.push({el: anim_number, start: start, end: end, interval: interval, bul: false});
+        anim_number.addEventListener("mouseenter", () => {
+            anim_number.style.transition = "all 1ms ease-in-out";
+            anim_number.style.transform = "scale(5)";
+            anim_number.style.opacity = "0";
+            setTimeout(()=>{
+                anim_number.style.transition = "all 300ms ease-in-out";
+                anim_number.style.transform = "scale(1)";
+                anim_number.style.opacity = "1";
+            }, 10);
+        });
+        // anim_number.addEventListener("mouseleave", () => {
+        //     anim_number.style.transition = "all 300ms ease-in-out";
+        //     anim_number.style.transform = "scale(1)";
+        // });
+    });
+    fAnimArr();
+    function fAnimArr() {
+        anim_arr.forEach((item) => {
+            let anim_number = item.el;
+            let bottom = anim_number.getBoundingClientRect().bottom;
+            if(bottom < window.innerHeight && !item.bul){
+                let i = item.start;
+                item.bul = true;
+                let intervalId = setInterval(() => {
+                    anim_number.innerHTML = i.toString();
+                    i++;
+                    if(i > item.end){
+                        clearInterval(intervalId);
+                    }
+                }, item.interval);
+            }
+        });
+    }
+    //-------------------------------------------------------------------------------
     window.addEventListener("scroll", (ev) => {
-        let ws = window.scrollY;
+        ws = window.scrollY;
+        //----------------------------------anim_numbers-begin-----------------------------------------------
+        fAnimArr();
+        //----------------------------------anim_numbers-end-------------------------------------------------
         let ws_min = Math.min(ws, 100);
         let height = Math.max(150 - ws, 50);
         if (height === 50 && needChange) {
