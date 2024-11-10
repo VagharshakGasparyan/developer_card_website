@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
             anim_number.style.transition = "all 0ms ease-in-out";
             anim_number.style.transform = "scale(5)";
             anim_number.style.opacity = "0";
-            setTimeout(()=>{
+            setTimeout(() => {
                 anim_number.style.transition = "all 300ms ease-in-out";
                 anim_number.style.transform = "scale(1)";
                 anim_number.style.opacity = "1";
@@ -31,24 +31,126 @@ window.addEventListener("load", () => {
         //     anim_number.style.transform = "scale(1)";
         // });
     });
+    //---------------------------------------------------------------------------------
+    fLightning();
+
+    function fLightning() {
+        if (!cogwheel_round) {
+            return 0;
+        }
+        let c = cogwheel_round.getBoundingClientRect();
+        let cx = c.left + c.width / 2;
+        let cy = c.top + c.height / 2;
+        let lightning_el = document.createElement("canvas");
+        lightning_el.style.zIndex = "1550";
+        lightning_el.style.position = "fixed";
+        lightning_el.style.width = "0";
+        lightning_el.style.height = "0";
+        lightning_el.style.left = "0";
+        lightning_el.style.top = "0";
+        lightning_el.style.display = "none";
+        // lightning_el.style.backgroundColor = "black";
+        document.body.appendChild(lightning_el);
+
+        let interval_id = null;
+        function drawPixel (canvasData, w, h, x, y, r, g, b, a) {
+            let index = (x + y * w) * 4;
+            canvasData.data[index] = r;
+            canvasData.data[index + 1] = g;
+            canvasData.data[index + 2] = b;
+            canvasData.data[index + 3] = a;
+        }
+        document.addEventListener("mousemove", (ev) => {
+            if(interval_id !== null){
+                clearInterval(interval_id);
+            }
+            let r = Math.sqrt((ev.x - cx) ** 2 + (ev.y - cy) ** 2);
+
+            if (r <= 100) {
+                let w = Math.round(Math.abs(ev.x - cx));
+                let h = Math.round(Math.abs(ev.y - cy));
+                let w1 = w + 20;
+                let h1 = h + 20;
+                lightning_el.style.display = "inline-block";
+                lightning_el.style.left = (Math.min(ev.x, cx) - 10) + "px";
+                lightning_el.style.top = (Math.min(ev.y, cy) - 10) + "px";
+                lightning_el.width = w1;
+                lightning_el.style.width = w1 + "px";
+                lightning_el.height = h1;
+                lightning_el.style.height = h1 + "px";
+                // console.log(w, h, w1, h1);
+                interval_id = setInterval(() => {
+                    // console.log("a", w, h);
+                    let is_hi = ((ev.x < cx && ev.y > cy) || (ev.x > cx && ev.y < cy));
+                    let is_hmw = h > w;
+                    let ctx = lightning_el.getContext("2d");
+                    ctx.clearRect(0, 0, w1, h1);
+                    let canvasData = ctx.getImageData(0, 0, w1, h1);
+
+                    let points = [];
+                    let prev = 0;
+                    if(is_hmw){
+                        for(let i = 0; i < h; i++){
+                            let x = Math.floor(Math.random() * 3) - 1 + prev;
+                            prev = x;
+                            points.push({x: x, y: i});
+                        }
+                        let last_x = points[points.length - 1].x;
+                        for(let i = 0; i < points.length; i++){
+                            let x = is_hi
+                                ? w - ((w - last_x) / h) * i - points[i].x
+                                : ((w - last_x) / h) * i +  points[i].x;
+                            x = Math.round(x);
+                            drawPixel(canvasData, w1, h1, x + 10, i + 10, 255, 255, 255, 255);
+                        }
+                    }else{
+                        for(let i = 0; i < w; i++){
+                            let y = Math.floor(Math.random() * 3) - 1 + prev;
+                            prev = y;
+                            points.push({x: i, y: y});
+                        }
+                        let last_y = points[points.length - 1].y;
+                        for(let i = 0; i < points.length; i++){
+                            let y = is_hi
+                                ? h - ((h - last_y) / w) * i - points[i].y
+                                : ((h - last_y) / w) * i +  points[i].y;
+                            y = Math.round(y);
+                            drawPixel(canvasData, w1, h1, i + 10, y + 10, 255, 255, 255, 255);
+                        }
+                    }
+
+
+                    ctx.putImageData(canvasData, 0, 0);
+                }, 40);
+            }else{
+                lightning_el.style.display = "none";
+                if(interval_id !== null){
+                    clearInterval(interval_id);
+                }
+            }
+        });
+    }
+
     fAnimArr();
+
     function fAnimArr() {
         anim_arr.forEach((item) => {
             let anim_number = item.el;
             let bottom = anim_number.getBoundingClientRect().bottom;
-            if(bottom < window.innerHeight && !item.bul){
+            if (bottom < window.innerHeight && !item.bul) {
                 let i = item.start;
                 item.bul = true;
                 let intervalId = setInterval(() => {
                     anim_number.innerHTML = i.toString();
                     i++;
-                    if(i > item.end){
+                    if (i > item.end) {
                         clearInterval(intervalId);
                     }
                 }, item.interval);
             }
         });
     }
+
     //-------------------------------------------------------------------------------
     window.addEventListener("scroll", (ev) => {
         ws = window.scrollY;
