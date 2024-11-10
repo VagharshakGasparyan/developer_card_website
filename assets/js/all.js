@@ -17,14 +17,14 @@ window.addEventListener("load", () => {
         let interval = parseInt(anim_number.getAttribute("data-interval") ?? "50");
         anim_arr.push({el: anim_number, start: start, end: end, interval: interval, bul: false});
         anim_number.addEventListener("mouseenter", () => {
-            anim_number.style.transition = "all 1ms ease-in-out";
+            anim_number.style.transition = "all 0ms ease-in-out";
             anim_number.style.transform = "scale(5)";
             anim_number.style.opacity = "0";
             setTimeout(()=>{
                 anim_number.style.transition = "all 300ms ease-in-out";
                 anim_number.style.transform = "scale(1)";
                 anim_number.style.opacity = "1";
-            }, 10);
+            }, 50);
         });
         // anim_number.addEventListener("mouseleave", () => {
         //     anim_number.style.transition = "all 300ms ease-in-out";
