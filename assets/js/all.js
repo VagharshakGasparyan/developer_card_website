@@ -29,7 +29,7 @@ window.addEventListener("load", ()=>{
                 ex_left.style.width = "calc(" + (50 - ws_min / 2) + "% + 15px)";
             }else if(exLeftRole === "height"){
                 ex_left.style.top = (150 - ws_min) + "px";
-                ex_left.style.height = (30 - ws_min < 0 ? 0 : 30 - ws_min) + "px";
+                ex_left.style.height = (30 - ws_min * 0.3 < 0 ? 0 : 30 - ws_min * 0.3) + "px";
             }
         }
         if(ex_right){
@@ -40,7 +40,7 @@ window.addEventListener("load", ()=>{
                 ex_right.style.width = "calc(" + (50 - ws_min / 2) + "% + 15px)";
             }else if(exLeftRole === "height"){
                 ex_right.style.top = (150 - ws_min) + "px";
-                ex_right.style.height = (30 - ws_min < 0 ? 0 : 30 - ws_min) + "px";
+                ex_right.style.height = (30 - ws_min * 0.3 < 0 ? 0 : 30 - ws_min * 0.3) + "px";
             }
         }
     }
