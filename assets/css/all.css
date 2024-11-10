@@ -138,6 +138,7 @@ footer {
 }
 
 main {
+    position: relative;
     width: 1280px;
     max-width: 100%;
     margin: 165px auto 0 auto;

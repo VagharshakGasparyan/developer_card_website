@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="26px" height="342px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3.957 53.052">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#783B00;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .fil0 {fill:#970}
+   ]]>
+  </style>
+ </defs>
+ <g>
+  <polygon class="fil0 str0" points="2.345,52.905 3.81,52.905 3.81,0.147 2.345,0.147 0.147,0.879 0.147,2.345 2.345,3.078 2.345,4.543 0.147,5.276 0.147,6.741 2.345,7.474 2.345,8.94 0.147,9.672 0.147,11.138 2.345,11.871 2.345,13.336 0.147,14.069 0.147,15.534 2.345,16.267 2.345,17.733 0.147,18.466 0.147,19.931 2.345,20.664 2.345,22.129 0.147,22.862 0.147,24.328 2.345,25.06 2.345,26.526 0.147,27.259 0.147,28.724 2.345,29.457 2.345,30.922 0.147,31.655 0.147,33.121 2.345,33.853 2.345,35.319 0.147,36.052 0.147,37.517 2.345,38.25 2.345,39.716 0.147,40.448 0.147,41.914 2.345,42.647 2.345,44.112 0.147,44.845 0.147,46.31 2.345,47.043 2.345,48.509 0.147,49.241 0.147,50.707 2.345,51.44 "/>
+ </g>
+</svg>
