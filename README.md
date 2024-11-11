@@ -20,12 +20,13 @@ It contains from HOME, ABOUT US, CONTACT US, SERVICES and OUR WORK pages.
 This project was designed to demonstrate:
 
 * Bootstrap
-    * Tech 1 subitem
-* Technology 2
-* .
-* .
-* .
-* Technology N
+    * Bootstrap css
+    * Bootstrap js
+* Font Awesome
+* HTML
+* CSS
+* JS
+* SVG
 
 ## Usage
 
