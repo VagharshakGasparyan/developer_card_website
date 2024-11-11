@@ -60,7 +60,15 @@ window.addEventListener("load", () => {
             canvasData.data[index + 2] = b;
             canvasData.data[index + 3] = a;
         }
-        document.addEventListener("mousemove", (ev) => {
+        window.addEventListener("resize", ()=>{
+            c = cogwheel_round.getBoundingClientRect();
+            cx = c.left + c.width / 2;
+            cy = c.top + c.height / 2;
+        });
+        document.addEventListener("mousemove", fLighting);
+
+        function fLighting(ev) {
+            console.log("aaa");
             if(interval_id !== null){
                 clearInterval(interval_id);
             }
@@ -128,7 +136,7 @@ window.addEventListener("load", () => {
                     clearInterval(interval_id);
                 }
             }
-        });
+        }
     }
 
     fAnimArr();
