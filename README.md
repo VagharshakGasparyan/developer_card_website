@@ -19,7 +19,7 @@ It contains from HOME, ABOUT US, CONTACT US, SERVICES and OUR WORK pages.
 
 This project was designed to demonstrate:
 
-* Technology 1
+* Bootstrap
     * Tech 1 subitem
 * Technology 2
 * .
