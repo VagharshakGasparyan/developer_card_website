@@ -432,6 +432,29 @@ main {
     user-select: none;
 }
 
+.img-out{
+    background-color: var(--bg-dark);
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 40px);
+    border: 1px solid var(--bd-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease;
+}
+
+.img-out:hover{
+    background-color: var(--bd-dark);
+    transform: scale(110%);
+}
+.img-out:hover i{
+    color: var(--bg-dark) !important;
+}
+
 
 
 
