@@ -68,7 +68,6 @@ window.addEventListener("load", () => {
         document.addEventListener("mousemove", fLighting);
 
         function fLighting(ev) {
-            console.log("aaa");
             if(interval_id !== null){
                 clearInterval(interval_id);
             }
