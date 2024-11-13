@@ -412,6 +412,7 @@ main {
 }
 
 .about-us{
+    position: relative;
     background-image: url("../images/bg-image1.jpg");
     /*backdrop-filter: opacity(50%);*/
     background-repeat: no-repeat;
